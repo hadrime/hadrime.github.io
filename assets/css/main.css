@@ -1,0 +1,463 @@
+@font-face {
+    font-family: 'Droid Arabic Naskh';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/DroidNaskh-Regular.eot);
+    src: url(../fonts/DroidNaskh-Regular.eot?#iefix) format('embedded-opentype'), url(../fonts/DroidNaskh-Regular.woff2) format('woff2'), url(../fonts/DroidNaskh-Regular.woff) format('woff'), url(../fonts/DroidNaskh-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Droid Arabic Naskh';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/DroidNaskh-Bold.eot);
+    src: url(../fonts/DroidNaskh-Bold.eot?#iefix) format('embedded-opentype'), url(../fonts/DroidNaskh-Bold.woff2) format('woff2'), url(../fonts/DroidNaskh-Bold.woff) format('woff'), url(../fonts/DroidNaskh-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/DroidKufi-Regular.eot);
+    src: url(../fonts/DroidKufi-Regular.eot?#iefix) format('embedded-opentype'), url(../fonts/DroidKufi-Regular.woff2) format('woff2'), url(../fonts/DroidKufi-Regular.woff) format('woff'), url(../fonts/DroidKufi-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/DroidKufi-Bold.eot);
+    src: url(../fonts/DroidKufi-Bold.eot?#iefix) format('embedded-opentype'), url(../fonts/DroidKufi-Bold.woff2) format('woff2'), url(../fonts/DroidKufi-Bold.woff) format('woff'), url(../fonts/DroidKufi-Bold.ttf) format('truetype');
+}
+* {direction: rtl;}
+
+body {
+  background-color: #f2f2f2;
+    font-family: "Droid Arabic Naskh";
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Droid Arabic Kufi";
+    font-weight: 300;
+    color: #333;
+}
+
+
+/* Paragraph & Typographic */
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #f85c37;
+    word-wrap: break-word;
+    cursor: pointer;
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+    color: #7b7b7b;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+/*---------------------------------------------------
+	3.1 Topbar
+---------------------------------------------------*/
+
+#section-topbar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 10000;
+	overflow: visible;
+	font: normal 16px/24px  'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#section-topbar a {
+  color: #fff;
+}
+
+#topbar-inner {
+	background: #111;
+	line-height: 0;
+	text-align: center;
+}
+
+/*
+	Top Bar
+
+	By default, top navigation bar uses "fixed" position
+*/
+#section-topbar ul#nav {
+	display: inline-block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+
+	border-left: 1px solid #222;
+
+	/* For IE, the outcast */
+	zoom:1;
+	*display: inline;
+}
+
+#section-topbar ul#nav > li {
+	display: block;
+    float: right;
+    padding: 0;
+}
+
+
+#section-topbar ul#nav a {
+  display: block;
+  font: normal 11px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  padding: 18px 20px 18px 20px;
+  border-right: 1px solid #222;
+}
+
+	#section-topbar ul#nav a:hover {
+	  background: #222;
+	  text-decoration: none;
+	  border-right: 1px solid #111;
+	}
+
+	#section-topbar ul#nav .active a {
+		background: #44bbaa;
+		border-right: 1px solid #111;
+	}
+
+		#section-topbar ul#nav .active a:hover {
+			background: #44bbaa;
+		}
+#section-topbar i {
+	font-size: 25px;
+}
+/*---------------------------------------------------
+	SECTION WRAPS
+---------------------------------------------------*/
+
+/* Header Wrap */
+#headerwrap {
+	background: url(../img/cover-1.jpg) no-repeat center top;
+	margin-top: 60px;
+	padding-top:140px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 500px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap h1 {
+	font-size: 80px;
+	color: white;
+	
+
+    font-family: 'Baloo Bhaijaan', cursive;
+
+
+}
+
+#headerwrap h3 {
+    font-size: 20px;
+    color: yellow;
+    background-color: #000;
+    padding: 10px 15px 12px;
+    display: inline-block;
+    opacity: 0.6;
+}
+
+#headerwrap h1,#headerwrap h3 {
+    text-shadow: 0 1px 0 black;
+}
+
+/* Intnro Wrap */
+
+#intro {
+	background: #2c3e50;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	color: white;
+} 
+
+#intro h5, p {
+	color: white;
+}
+
+#intro i {
+	color: white;
+	font-size: 20px;
+	padding-left: 8px;
+	vertical-align: middle;
+}
+
+
+#skillswrap {
+	background: #2c3e50;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	color: white;
+}
+
+#skillswrap h3,#skillswrap h5, p {
+	color: white;
+}
+
+#footwrap {
+	background: #2f2f2f;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#footwrap p {
+	color: white;
+}
+
+#footwrap h5 {
+	color: white;
+}
+
+
+#footwrap t {
+	font-weight: 700;
+}
+
+#footwrap i {
+	padding-left: 8px;
+	color: #1abc9c;
+}
+
+/* Copyright Wrap */
+
+#c {
+	background: #222222;
+	padding-top: 15px;
+	text-align: left;
+}
+
+#c p {
+	color: white
+}
+
+
+
+/* Global Values */
+
+.desc {
+	padding-top: 50px;
+}
+
+.desc p {
+	color: #2f2f2f;
+}
+
+.desc t {
+	color: #34495e;
+	font-weight: 700;
+}
+
+.desc imp {
+	padding: 6px;
+	color: white;
+	background: #34495e;
+}
+
+.desc more {
+	color: #95a5a6;
+}
+
+
+sm {
+	font-size: 12px;
+}
+#footwrap a {
+    color: white;
+}
+#footwrap i.fa.fa-at {
+    padding: 4px;
+}
+
+
+
+
+
+
+
+
+
+#skillswrap h2 {
+    color: white;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto
+}
+
+.clear {
+    clear: both
+}
+#contributions #pies * {
+    direction: ltr !important;
+}
+#contributions .input-group-addon {
+    background-image: linear-gradient(to bottom, #fff 0px, #f9f9f9 100%);
+    background-repeat: repeat-x;
+    border-radius: 3px;
+}
+#contributions .rs-tooltip-text label {
+    font-family: "Cairo", "Droid Arabic Kufi", cursive;
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+#contributions .rs-tooltip-text b {
+    font-size: 24px;
+}
+#contributions #downbtns {
+    padding: 70px 0 30px;
+}
+#result {
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    box-shadow: 0 0 20px -13px rgba(0, 0, 0, 0.5);
+    font-size: 40px;
+    margin-bottom: 70px;
+    margin-top: 60px;
+    padding: 10px;
+    clear: both;
+}
+#face {
+    background-position: -8px -8px;
+    border: 10px solid #ef2700;
+    border-radius: 150px;
+    display: inline-table;
+    height: 200px;
+    position: relative;
+    width: 200px;
+}
+#face #reye {
+    background-color: #ef2700;
+    border-radius: 30px;
+    height: 30px;
+    position: absolute;
+    right: 44px;
+    top: 60px;
+    width: 30px;
+}
+#face #leye {
+    background-color: #ef2700;
+    border-radius: 30px;
+    height: 30px;
+    position: absolute;
+    left: 44px;
+    top: 60px;
+    width: 30px;
+}
+#face #bothorn {
+    position: relative;
+    top: -33px;
+}
+#face #mouth {
+    border-color: #ef2700;
+    border-image: none;
+    border-radius: 60px;
+    border-style: solid;
+    border-width: 30px 0 0;
+    height: 80px;
+    position: absolute;
+    left: 35%;
+    top: 122px;
+    width: 60px;
+}
+.rshyness {
+    background-color: red;
+    border-radius: 13px;
+    box-shadow: 0 0 25px 10px red;
+    height: 0;
+    position: absolute;
+    right: 45px;
+    top: 111px;
+    width: 0;
+}
+.lshyness {
+    background-color: red;
+    border-radius: 13px;
+    box-shadow: 0 0 25px 10px red;
+    height: 0;
+    position: absolute;
+    left: 45px;
+    top: 111px;
+    width: 0
+}
+#contributions .desc {
+    color: gray;
+    margin-top: 10px;
+}
+.rtint {
+    color: lightskyblue;
+    font-size: 30px;
+    position: absolute;
+    right: 50px;
+    top: 62px;
+}
+.ltint {
+    color: lightskyblue;
+    font-size: 30px;
+    position: absolute;
+    left: 50px;
+    top: 62px;
+}
+.rs-input.rs-tooltip-text {
+  font-size: 36px;
+}
+.rs-seperator {
+    border: none !important;
+}
