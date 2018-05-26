@@ -313,5 +313,67 @@ function goTo(e, g, f) {
 }
 </script>
     <script src="http://hadri.me/assets/js/bootstrap.js"></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+        <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(["init", {
+          appId: "cceb8bbe-bb71-427d-8bf6-6d4f095a2852",
+          autoRegister: true,
+          notifyButton: {
+            enable: true,
+            prenotify: true,
+            showCredit: false,
+            text: {
+                'tip.state.unsubscribed': 'اِشترِك في التنبيهات',
+                'tip.state.subscribed': "أنت مشترك في التنبيهات",
+                'tip.state.blocked': "لقد قُمت بحظر التنبيهات",
+                'message.prenotify': 'اِضغط للاشتراك في التنبيهات',
+                'message.action.subscribed': "تم الاشتراك بنجاح، شكرا لك!",
+                'message.action.resubscribed': "تم الاشتراك مرة أخرى بنجاح، شكرا لك!",
+                'message.action.unsubscribed': "لن يصلك أي تنبيه بعد الآن",
+                'dialog.main.title': 'التنبيهات',
+                'dialog.main.button.subscribe': 'اشتراك',
+                'dialog.main.button.unsubscribe': 'إلغاء الاشتراك',
+                'dialog.blocked.title': 'إلغاء حظر التنبيهات',
+                'dialog.blocked.message': "اِتبع هذه التعليمات للسماح للتنبيهات:"
+            },
+            colors: {
+              'circle.background': '#1b95e0',
+              'circle.foreground': 'white',
+              'badge.background': '#1b95e0',
+              'badge.foreground': 'white',
+              'badge.bordercolor': 'white',
+              'pulse.color': 'white',
+              'dialog.button.background.hovering': 'rgb(77, 101, 113)',
+              'dialog.button.background.active': 'rgb(70, 92, 103)',
+              'dialog.button.background': '#1b95e0',
+              'dialog.button.foreground': 'white'
+            },
+            promptOptions: {
+                actionMessage: "اِشترك في نظام التنبيهات ليصلك كل جديد الفريق",
+                acceptButtonText: "اشتراك",
+                cancelButtonText: "لا أريد"
+            },
+            displayPredicate: function() {
+                return OneSignal.isPushNotificationsEnabled()
+                    .then(function(isPushEnabled) {
+                        return !isPushEnabled;
+                    });
+            }
+          },
+          safari_web_id: 'web.onesignal.auto.0d6d1ede-d24a-45d0-ba73-2f88839c0735'
+        }]);
+        </script>
+        <style>
+        #onesignal-bell-container * {
+            font-family: "Droid Arabic Kufi" !important;
+            font-size: 16px !important;
+            letter-spacing: 0 !important;
+        }
+        #unsubscribe-button {
+            background-color: #dd4b39 !important;
+        }
+        .push-notification-text-container {direction: rtl !important;}
+        </style>
   </body>
 </html>
